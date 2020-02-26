@@ -71,6 +71,7 @@
     <module>spring-boot-demo-easycode</module>
     <module>spring-boot-demo-validator</module>
     <module>spring-boot-demo-jsp</module>
+    <module>spring-boot-demo-ioc</module>
   </modules>
   <packaging>pom</packaging>
 
