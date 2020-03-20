@@ -16,12 +16,12 @@ import org.springframework.context.annotation.Configuration;
  * @author Chen.Chao
  * @date Created in 2020/1/12 10:31
  */
-@Configuration
+// @Configuration
 public class HttpsConfig {
     /**
      * 配置 http(80) -> 强制跳转到 https(443)
      */
-    @Bean
+    // @Bean
     public Connector connector() {
         Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
         connector.setScheme("http");
@@ -31,7 +31,7 @@ public class HttpsConfig {
         return connector;
     }
 
-    @Bean
+    // @Bean
     public TomcatServletWebServerFactory tomcatServletWebServerFactory(Connector connector) {
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
             @Override

@@ -1,11 +1,11 @@
 server:
+  # 浏览器默认端口 和 80 类似
+  port: 8443
   ssl:
     # 证书路径
-    key-store: classpath:server.keystore
-    key-alias: tomcat
     enabled: true
-    key-store-type: JKS
-    #与申请时输入一致
-    key-store-password: 123456
-    # 浏览器默认端口 和 80 类似
-  port: 443
+    key-store: classpath:liangfangTech.pfx
+    key-store-password: fIta3vX7
+    key-store-type: PKCS12
+
+http-port: 8080
