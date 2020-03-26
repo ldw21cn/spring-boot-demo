@@ -1,4 +1,28 @@
+
+
 redisson:
   address: redis://10.10.96.175:6379
   password:
   database: 5
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.xkcoding.mybatis.entity
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-boot-demo?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+  hikari:
+    auto-commit: true
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+    minimum-idle: 5
+    maximum-pool-size: 10
+    read-only: false
+
+server:
+  port: 9090
