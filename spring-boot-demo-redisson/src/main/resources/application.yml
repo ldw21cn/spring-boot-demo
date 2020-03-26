@@ -1,7 +1,7 @@
 
 
 redisson:
-  address: redis://10.10.96.175:6379
+  address: redis://localhost:6379
   password:
   database: 5
 

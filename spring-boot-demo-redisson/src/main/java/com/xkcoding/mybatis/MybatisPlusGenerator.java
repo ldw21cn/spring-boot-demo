@@ -10,7 +10,7 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 
-public class MpGenerator {
+public class MybatisPlusGenerator {
 
     public static void main(String[] args) {
         AutoGenerator mpg = new AutoGenerator();
@@ -24,7 +24,7 @@ public class MpGenerator {
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(false);// XML columList
-        gc.setAuthor("sailer");
+        gc.setAuthor("daweilv");
 
         mpg.setGlobalConfig(gc);
 

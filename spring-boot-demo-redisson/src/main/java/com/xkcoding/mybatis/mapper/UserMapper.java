@@ -8,7 +8,7 @@ import com.xkcoding.mybatis.entity.User;
  *  Mapper 接口
  * </p>
  *
- * @author sailer
+ * @author daweilv
  * @since 2020-03-26
  */
 public interface UserMapper extends BaseMapper<User> {
