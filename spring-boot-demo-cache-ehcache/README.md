@@ -84,7 +84,7 @@
  * 启动类
  * </p>
  *
- * @package: com.xkcoding.cache.ehcache
+ * @package: com.xkcoding.redisson.ehcache
  * @description: 启动类
  * @author: yangkai.shen
  * @date: Created in 2018/11/16 17:02
@@ -165,7 +165,7 @@ logging:
  * UserService
  * </p>
  *
- * @package: com.xkcoding.cache.ehcache.service.impl
+ * @package: com.xkcoding.redisson.ehcache.service.impl
  * @description: UserService
  * @author: yangkai.shen
  * @date: Created in 2018/11/16 16:54
@@ -240,7 +240,7 @@ public class UserServiceImpl implements UserService {
  * ehcache缓存测试
  * </p>
  *
- * @package: com.xkcoding.cache.ehcache.service
+ * @package: com.xkcoding.redisson.ehcache.service
  * @description: ehcache缓存测试
  * @author: yangkai.shen
  * @date: Created in 2018/11/16 16:58

@@ -1,0 +1,4 @@
+redisson:
+  address: redis://10.10.96.175:6379
+  password:
+  database: 5

@@ -124,7 +124,7 @@ logging:
  * redis配置
  * </p>
  *
- * @package: com.xkcoding.cache.redis.config
+ * @package: com.xkcoding.redisson.redis.config
  * @description: redis配置
  * @author: yangkai.shen
  * @date: Created in 2018/11/15 16:41
@@ -171,7 +171,7 @@ public class RedisConfig {
  * UserService
  * </p>
  *
- * @package: com.xkcoding.cache.redis.service.impl
+ * @package: com.xkcoding.redisson.redis.service.impl
  * @description: UserService
  * @author: yangkai.shen
  * @date: Created in 2018/11/15 16:45
@@ -255,7 +255,7 @@ public class UserServiceImpl implements UserService {
  * Redis测试
  * </p>
  *
- * @package: com.xkcoding.cache.redis
+ * @package: com.xkcoding.redisson.redis
  * @description: Redis测试
  * @author: yangkai.shen
  * @date: Created in 2018/11/15 17:17
@@ -306,7 +306,7 @@ public class RedisTest extends SpringBootDemoCacheRedisApplicationTests {
  * Redis - 缓存测试
  * </p>
  *
- * @package: com.xkcoding.cache.redis.service
+ * @package: com.xkcoding.redisson.redis.service
  * @description: Redis - 缓存测试
  * @author: yangkai.shen
  * @date: Created in 2018/11/15 16:53
