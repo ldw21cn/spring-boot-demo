@@ -1,6 +1,7 @@
 package com.xkcoding.controller;
 
 import com.xkcoding.annotation.ErrorChecker;
+import com.xkcoding.annotation.TimeChecker;
 import com.xkcoding.pojo.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +20,16 @@ import java.util.Map;
 @RestController
 public class HelloController {
 
-    @RequestMapping
+    @RequestMapping("/hello")
     @ErrorChecker
     public Result hello() throws Exception {
         throw new Exception();
+    }
+
+    @RequestMapping("/time")
+    @TimeChecker
+    public Result time() {
+        return new Result();
     }
 
 }
