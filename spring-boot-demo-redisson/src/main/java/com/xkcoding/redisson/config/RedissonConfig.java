@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
+import org.redisson.codec.JsonJacksonCodec;
 import org.redisson.config.Config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -33,6 +34,9 @@ public class RedissonConfig {
         Config config = new Config();
         config.useSingleServer().setDatabase(database);
         config.useSingleServer().setAddress(address);
+
+        // 此处设置编码，如果设成其它编码，在 redis 中看到的是二进制样式
+        config.setCodec(new JsonJacksonCodec());
 
         if (!StringUtils.isEmpty(password)) {
             config.useSingleServer().setPassword(password);
