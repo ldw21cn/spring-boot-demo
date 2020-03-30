@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
 /**
- * 功能描述：
+ * 功能描述： 通过 redis 的分布式锁实现秒杀系统
  *
  * @Author dawei.lv  -  daweilv@pateo.com.cn
  * @Date 2020/3/27 14:01
@@ -63,12 +63,13 @@ public class QiangHongBaoController {
 
     private String qiangdan(String user) {
 
+
         if (kucun <= 0) {
             return "";
         }
 
         boolean lock = redissonDistributedLocker.tryLock(goodsKey, TimeUnit.SECONDS, timeout, 1000);
-
+        //
         if (lock) {
             log.info("用户{}拿到锁。。。", user);
 

@@ -5,10 +5,7 @@ import com.xkcoding.redisson.lock.RedissonDistributedLocker;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.redisson.RedissonScoredSortedSet;
-import org.redisson.api.RBucket;
-import org.redisson.api.RLock;
-import org.redisson.api.RMap;
-import org.redisson.api.RedissonClient;
+import org.redisson.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -135,6 +132,23 @@ public class RedissonClientTest {
 
         Integer o = (Integer) bucket.get();
         System.out.println(o);
+    }
+
+    @Test
+    public void redissonBoomfilter() {
+        RBloomFilter<Object> bloomFilter = redissonClient.getBloomFilter("bloom");
+        bloomFilter.tryInit(100000000L, 0.03);
+
+
+
+
+    }
+
+    @Test
+    public void redissonBoomFilter() {
+        RBloomFilter<Object> bloomFilter = redissonClient.getBloomFilter("bloom");
+        boolean contains = bloomFilter.contains(2000000);
+        System.out.println(contains);
     }
 
 }
