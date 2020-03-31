@@ -1,5 +1,6 @@
 package com.xkcoding.redisson.redis;
 
+import com.google.common.primitives.Ints;
 import com.xkcoding.redisson.redis.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
@@ -41,9 +42,13 @@ public class RedisTest extends SpringBootDemoCacheRedisApplicationTests {
     public void get() {
         // 测试线程安全，程序结束查看redis中count的值是否为1000
         ExecutorService executorService = Executors.newFixedThreadPool(1000);
-        IntStream.range(0, 1000).forEach(i -> executorService.execute(() -> stringRedisTemplate.opsForValue().increment("count", 1)));
+        // IntStream.range(0, 1000).forEach(i -> executorService.execute(() -> stringRedisTemplate.opsForValue().increment("count", 1)));
 
-        stringRedisTemplate.opsForValue().set("k1", "v1");
+        IntStream.range(0,1000).parallel().forEach(i->{
+            stringRedisTemplate.opsForValue().increment("count", 1);
+        });
+
+        /*stringRedisTemplate.opsForValue().set("k1", "v1");
         String k1 = stringRedisTemplate.opsForValue().get("k1");
         log.debug("【k1】= {}", k1);
 
@@ -52,6 +57,6 @@ public class RedisTest extends SpringBootDemoCacheRedisApplicationTests {
         redisCacheTemplate.opsForValue().set(key, new User(1L, "user1"));
         // 对应 String（字符串）
         User user = (User) redisCacheTemplate.opsForValue().get(key);
-        log.debug("【user】= {}", user);
+        log.debug("【user】= {}", user);*/
     }
 }

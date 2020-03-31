@@ -72,6 +72,9 @@
     <module>spring-boot-demo-validator</module>
     <module>spring-boot-demo-jsp</module>
     <module>spring-boot-demo-ioc</module>
+    <module>spring-boot-demo-practice</module>
+    <module>spring-boot-demo-redisson</module>
+    <module>spring-boot-demo-annotation</module>
   </modules>
   <packaging>pom</packaging>
 
