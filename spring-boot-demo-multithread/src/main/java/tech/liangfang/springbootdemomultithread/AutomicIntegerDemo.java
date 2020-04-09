@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 /**
- * 功能描述：
+ * 功能描述： 原子操作同步类
  *
  * @Author dawei.lv  -  daweilv@pateo.com.cn
  * @Date 2020/4/7 22:19
