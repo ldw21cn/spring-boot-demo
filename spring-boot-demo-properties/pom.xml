@@ -28,10 +28,16 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!--
-		在 META-INF/additional-spring-configuration-metadata.json 中配置
-		可以去除 application.yml 中自定义配置的红线警告，并且为自定义配置添加 hint 提醒
-		 -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+    </dependency>
+
+
+    <!--
+    在 META-INF/additional-spring-configuration-metadata.json 中配置
+    可以去除 application.yml 中自定义配置的红线警告，并且为自定义配置添加 hint 提醒
+     -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>

@@ -1,5 +1,6 @@
 package com.xkcoding.properties.property;
 
+import com.google.common.collect.BiMap;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -19,6 +20,8 @@ import java.util.Map;
 @ConfigurationProperties(prefix = "wechat")
 @PropertySource(value = "classpath:wechat.properties",encoding = "UTF-8")
 public class WechatProperty {
+
+    // private Map intentMap;
 
     private Map intentMap;
 
