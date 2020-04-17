@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 功能描述：
+ * 功能描述： 对 feign 的调用输出日志
  *
  * @Author dawei.lv  -  daweilv@pateo.com.cn
  * @Date 2020/4/18 00:22

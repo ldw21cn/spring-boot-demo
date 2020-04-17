@@ -28,25 +28,26 @@ eureka:
 #          thread:
 #            timeoutInMilliseconds: 600000
 
+#
+#feign:
+#  hystrix:
+#    enabled: false
+#  client:
+#    config:
+#      default:
+#        connectTimeout: 2000
+#        readTimeout: 5000
+#        loggerLevel: FULL
+#        retryer: feign.Retryer.Default
+#
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          strategy: SEMAPHORE
 
-feign:
-  hystrix:
-    enabled: false
-  client:
-    config:
-      default:
-        connectTimeout: 2000
-        readTimeout: 5000
-        loggerLevel: FULL
-        retryer: feign.Retryer.Default
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          strategy: SEMAPHORE
-
+# 记录 feign 调用的日志
 logging:
   level:
     com.xkcoding.feign.ConsumerClientFeign: debug
