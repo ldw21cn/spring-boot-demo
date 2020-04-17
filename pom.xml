@@ -75,6 +75,9 @@
     <module>spring-boot-demo-practice</module>
     <module>spring-boot-demo-redisson</module>
     <module>spring-boot-demo-annotation</module>
+    <module>spring-boot-demo-multithread</module>
+    <module>spring-boot-demo-regex</module>
+    <module>spring-cloud-demo-euraka</module>
   </modules>
   <packaging>pom</packaging>
 
