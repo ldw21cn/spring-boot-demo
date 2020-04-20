@@ -29,6 +29,6 @@ public class FeignConfigure {
      */
     @Bean
     public Retryer feiRetryer() {
-        return new Retryer.Default(100,1000,2);
+        return new Retryer.Default(100,1000,1);
     }
 }
