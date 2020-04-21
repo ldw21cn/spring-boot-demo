@@ -34,7 +34,7 @@ public class AopLog {
 	private static final String START_TIME = "request-start";
 
 	/**
-	 * 切入点
+	 * 切入点 com.xkcoding.log.aop.controller
 	 */
 	@Pointcut("execution(public * com.xkcoding.log.aop.controller.*Controller.*(..))")
 	public void log() {

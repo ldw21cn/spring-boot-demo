@@ -78,6 +78,7 @@
     <module>spring-boot-demo-multithread</module>
     <module>spring-boot-demo-regex</module>
     <module>spring-cloud-demo-euraka</module>
+    <module>spring-boot-demo-redis-session</module>
   </modules>
   <packaging>pom</packaging>
 
