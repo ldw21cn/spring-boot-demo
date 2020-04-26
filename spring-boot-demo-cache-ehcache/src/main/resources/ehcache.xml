@@ -3,8 +3,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
         updateCheck="false">
+
     <!--缓存路径，用户目录下的base_ehcache目录-->
-    <diskStore path="user.home/base_ehcache"/>
+    <diskStore path="/Users/lvdawei/学习/项目/spring-boot-demo/spring-boot-demo-cache-ehcache/ehcache"/>
 
     <defaultCache
             maxElementsInMemory="20000"
