@@ -79,6 +79,7 @@
     <module>spring-boot-demo-regex</module>
     <module>spring-cloud-demo-euraka</module>
     <module>spring-boot-demo-redis-session</module>
+    <module>spring-boot-demo-applicationEvent</module>
   </modules>
   <packaging>pom</packaging>
 
