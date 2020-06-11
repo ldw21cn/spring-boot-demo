@@ -91,7 +91,7 @@ curl --location --request POST 'http://127.0.0.1:8080/oauth/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Authorization: Basic b2F1dGgyOm9hdXRoMg==' \
 --data-urlencode 'grant_type=authorization_code' \
---data-urlencode 'code=GgX6QD' \
+--data-urlencode 'code=q7RAfb' \
 --data-urlencode 'redirect_uri=http://example.com' \
 --data-urlencode 'client_id=oauth2' \
 --data-urlencode 'scope=READ WRITE'
@@ -138,7 +138,7 @@ curl --location --request POST 'http://127.0.0.1:8080/oauth/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Authorization: Basic b2F1dGgyOm9hdXRoMg==' \
 --data-urlencode 'grant_type=refresh_token' \
---data-urlencode 'refresh_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyIl0sInVzZXJfbmFtZSI6ImFkbWluIiwic2NvcGUiOlsiUkVBRCJdLCJhdGkiOiJmMDIwOGI1NS1hMmNhLTQ2MjgtODliMS03MjkzNjgzMDE5Y2EiLCJleHAiOjE1NzgzODY4MTYsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiMGViNTU2MTQtYjgxYS00MTFmLTg1MTAtZThkMjZmODJmMjJhIiwiY2xpZW50X2lkIjoib2F1dGgyIn0.CBGcjirkf-3187SgbZr0ikauiCS8U9YLaoR4sNlRQjd-gaIeF5PChnIs_yAmG_VpqPFlPRdSl8DA05S2QnFpT3TkRjyP-LPDZgsVAPfczMAdVywU1zOKYZeq-gM6p9bmGEabbZoBlIxOImsjeyFSCui6UtRTZjNlj3AhGIzvs52T8bDqC796iHPDZvJ97MMgsEiRyu-mxDm1o1LMuBX9RHCx9rAkBVf52q36bqWMcYAlDOu1wYjpmhalSLZyWcmraQvClEitXGJI4eTFapTnuXQuWFIL-973V_5Shw98-bk65zZQOEheazHrUf-n4h-sYT4akehnYSVxX2UIg9XsCw'
+--data-urlencode 'refresh_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyIl0sInVzZXJfbmFtZSI6InRlc3QiLCJzY29wZSI6WyJSRUFEIiwiV1JJVEUiXSwiZXhwIjoxNTg5MzU4Mzc4LCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwianRpIjoiYTNiMjYyMDEtNmI1OS00ZTI5LTgwNzEtMDNmNDQyNTU5Yjc0IiwiY2xpZW50X2lkIjoib2F1dGgyIn0.eBRiQyOXj4GmkvM1WsqgWqftSjxJrC7xi46wwr4fC4OBM3PK9zOGSY_jcDtDkPrmusMOaAB0zYX0SNOo2LZThsfI0--YltmQRIZ63GIyZu71s-kNpJjeT6P7UKqz3NV3D5J0bHR5CkVRas9pfmrt_kr52n_gZngngbE73CyWttnti5SittObX3rosIQ_7nT10Jz-xda6R-b-rQHGfhiWyg2ZGauPeroqyLt9OLRnkG8SE1GSTwKpTXnajeaeDWHiIylX2B5PodSaqipbFIgVkV68Bhqh9yacIBXq-xVR8AVUOJ0VJbYO5mDKTZ71lvKfpxxeZuVYNc6UY9ske-pAcA'
 ----
 
 == 解析令牌
@@ -150,7 +150,7 @@ curl --location --request POST 'http://127.0.0.1:8080/oauth/token' \
 curl --location --request POST 'http://127.0.0.1:8080/oauth/check_token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Authorization: Basic b2F1dGgyOm9hdXRoMg==' \
---data-urlencode 'token='
+--data-urlencode 'token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsib2F1dGgyIl0sInVzZXJfbmFtZSI6InRlc3QiLCJzY29wZSI6WyJSRUFEIiwiV1JJVEUiXSwiZXhwIjoxNTg5MzU4Mzc4LCJhdXRob3JpdGllcyI6WyJST0xFX1RFU1QiXSwianRpIjoiYTNiMjYyMDEtNmI1OS00ZTI5LTgwNzEtMDNmNDQyNTU5Yjc0IiwiY2xpZW50X2lkIjoib2F1dGgyIn0.eBRiQyOXj4GmkvM1WsqgWqftSjxJrC7xi46wwr4fC4OBM3PK9zOGSY_jcDtDkPrmusMOaAB0zYX0SNOo2LZThsfI0--YltmQRIZ63GIyZu71s-kNpJjeT6P7UKqz3NV3D5J0bHR5CkVRas9pfmrt_kr52n_gZngngbE73CyWttnti5SittObX3rosIQ_7nT10Jz-xda6R-b-rQHGfhiWyg2ZGauPeroqyLt9OLRnkG8SE1GSTwKpTXnajeaeDWHiIylX2B5PodSaqipbFIgVkV68Bhqh9yacIBXq-xVR8AVUOJ0VJbYO5mDKTZ71lvKfpxxeZuVYNc6UY9ske-pAcA'
 ----
 
 解析结果
@@ -177,6 +177,8 @@ curl --location --request POST 'http://127.0.0.1:8080/oauth/check_token' \
 ----
 
 == 退出登录
+
+请求：http://localhost:8080/oauth/logout?redirect_url=http://baidu.com
 
 授权码模式登陆是在授权服务器上登录的，所以退出也要在授权服务器上退出。
 

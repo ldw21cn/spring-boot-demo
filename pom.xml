@@ -80,6 +80,7 @@
     <module>spring-cloud-demo-euraka</module>
     <module>spring-boot-demo-redis-session</module>
     <module>spring-boot-demo-applicationEvent</module>
+    <module>spring-boot-demo-mybatis-plus-plugin</module>
   </modules>
   <packaging>pom</packaging>
 

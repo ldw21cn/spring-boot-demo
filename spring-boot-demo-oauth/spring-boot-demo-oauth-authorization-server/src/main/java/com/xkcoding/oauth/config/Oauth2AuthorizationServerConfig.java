@@ -40,7 +40,8 @@ public class Oauth2AuthorizationServerConfig extends AuthorizationServerConfigur
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         // 从数据库读取我们自定义的客户端信息
-        clients.withClientDetails(sysClientDetailsService);
+        clients.withClientDetails(sysClientDetailsService)
+        ;
     }
 
     @Override
@@ -50,5 +51,6 @@ public class Oauth2AuthorizationServerConfig extends AuthorizationServerConfigur
             .tokenKeyAccess("isAuthenticated()")
             // 获取 token 信息同样需要 basic 认证客户端信息
             .checkTokenAccess("isAuthenticated()");
+            // .allowFormAuthenticationForClients();
     }
 }
