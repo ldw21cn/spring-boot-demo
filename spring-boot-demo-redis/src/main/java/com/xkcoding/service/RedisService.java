@@ -1,16 +1,9 @@
 package com.xkcoding.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.data.redis.serializer.RedisSerializer;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Map;
 
 /**
  * 功能描述：
@@ -27,15 +20,12 @@ public class RedisService {
     RedisTemplate strRedisTemplate;
 
 
-
     public void set(String key, Object val) {
-        ValueOperations ops = strRedisTemplate.opsForValue();
-        ops.set(key, val);
+        strRedisTemplate.opsForValue().set(key, val);
     }
 
-    public Object get(String key) {
-        ValueOperations ops = strRedisTemplate.opsForValue();
-        return ops.get(key);
+    public <T extends Object> T get(String key) {
+        return (T) strRedisTemplate.opsForValue().get(key);
     }
 
 
@@ -47,25 +37,23 @@ public class RedisService {
         strRedisTemplate.opsForHash().put(key, field, object);
     }
 
-    public Object getHash(String key,String field) {
-        return strRedisTemplate.opsForHash().get(key, field);
+    public <T extends Object> T getHash(String key, String field) {
+        return (T) strRedisTemplate.opsForHash().get(key, field);
     }
 
-    public void incrKey(String key, Integer value){
+    public void incrKey(String key, Integer value) {
         if (null == key || null == value) {
             return;
         }
         intRedisTemplate.opsForValue().increment(key, value);
     }
 
-    public Integer getInt(String key) {
+    public <T extends Object> T getInt(String key) {
         if (null == key) {
             return null;
         }
-        return (Integer) intRedisTemplate.opsForValue().get(key);
+        return (T) intRedisTemplate.opsForValue().get(key);
     }
-
-
 
 
 }
