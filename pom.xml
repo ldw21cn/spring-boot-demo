@@ -81,6 +81,8 @@
     <module>spring-boot-demo-redis-session</module>
     <module>spring-boot-demo-applicationEvent</module>
     <module>spring-boot-demo-mybatis-plus-plugin</module>
+    <module>spring-boot-demo-stream</module>
+      <module>spring-boot-demo-redis</module>
   </modules>
   <packaging>pom</packaging>
 

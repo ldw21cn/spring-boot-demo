@@ -1,0 +1,8 @@
+server:
+  port: 8081
+
+spring:
+  redis:
+    host: 10.10.96.175
+    port: 6379
+    database: 3
