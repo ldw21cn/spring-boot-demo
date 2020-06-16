@@ -42,6 +42,11 @@ public class UserController {
         peopleService.saveOrUpdate(people);
     }
 
+    @RequestMapping("/delUser")
+    public void delUser() {
+        peopleService.delete(100L);
+    }
+
     @RequestMapping("/getUser")
     public People getPeople() {
         People people = peopleService.get(100L);
@@ -53,6 +58,8 @@ public class UserController {
         Object o = redisService.get("1");
         return o;
     }
+
+
 
     @RequestMapping("/set")
     public void setUser() {

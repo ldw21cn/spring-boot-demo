@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import com.xkcoding.pojo.People;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -40,5 +41,11 @@ public class PeopleService {
         // 我们假设从数据库读取
         log.info("查询用户【id】= {}", id);
         return DATABASES.get(id);
+    }
+
+    @CacheEvict(value = "user", key = "#id")
+    public void delete(Long id) {
+        DATABASES.remove(id);
+        log.info("删除用户【id】= {}", id);
     }
 }
